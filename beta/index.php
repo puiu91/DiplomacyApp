@@ -134,6 +134,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
     <script src="custom/js/diplomacy.js"></script>
+
+
+    <style type="text/css">
+
+    .mdl-navigation__link {
+        font-size: 20px;
+    }
+
+
+    </style>
+
 </head>
 
 <body>
