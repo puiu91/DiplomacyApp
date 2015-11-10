@@ -34,3 +34,5 @@ http://samples.msdn.microsoft.com/workshop/samples/svg/zoomAndPan/zoomingAndPann
 http://pencilscoop.com/2014/03/svg-zoom-effects-with-internal-javascipt
 
 http://pencilscoop.com/2013/11/animate-svg-icons-with-css3-jquery
+
+http://www.w3.org/TR/SVG/propidx.html
