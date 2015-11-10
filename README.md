@@ -3,7 +3,7 @@ App to speed up order creation in Diplomacy board game
 
 There are three phases to this project.
 
-Phase 1
+**Phase** 1 (beta done, in beta2 folder)
 - create a small phone webapp to speed up order creation by users
 
 Phase 2 
