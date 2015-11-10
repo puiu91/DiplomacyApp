@@ -50,6 +50,7 @@ http://www.creativebloq.com/netmag/create-responsive-svg-image-maps-51411831
 **Creating new SVG Nodes**
 
 http://stackoverflow.com/questions/16488884/add-svg-element-to-existing-svg-using-dom
+http://sarasoueidan.com/blog/svg-transformations/
 
 **add click listeners to all units**
 
