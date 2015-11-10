@@ -39,12 +39,13 @@ http://pencilscoop.com/2013/11/animate-svg-icons-with-css3-jquery
 
 http://www.w3.org/TR/SVG/propidx.html
 
-** For Mapping ** 
+**For Mapping** 
 
 http://www.smashingmagazine.com/2015/09/making-svg-maps-from-natural-earth-data/
+http://techslides.com/50-javascript-libraries-and-plugins-for-maps
 
-** Creating new SVG Nodes **
+**Creating new SVG Nodes**
 
 http://stackoverflow.com/questions/16488884/add-svg-element-to-existing-svg-using-dom
 
-** add click listeners to all units **
+**add click listeners to all units**
