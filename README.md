@@ -41,3 +41,6 @@ http://www.w3.org/TR/SVG/propidx.html
 
 ** For Mapping ** 
 http://www.smashingmagazine.com/2015/09/making-svg-maps-from-natural-earth-data/
+
+** Creating new SVG Nodes **
+http://stackoverflow.com/questions/16488884/add-svg-element-to-existing-svg-using-dom
