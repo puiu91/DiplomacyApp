@@ -18,8 +18,7 @@ Limitations
 Phase 3 
 - use Node.js or WebSockets to create piece moves, joining the app from Phase 1 with the svg map in Phase 2
 - alternatively, let players play on their own computer and communicate with each other with orders they create
-- 
 
 
-Resources Needed:**
+**Resources Needed:**
 https://msdn.microsoft.com/en-us/library/gg589508(v=vs.85).aspx
