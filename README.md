@@ -49,3 +49,5 @@ http://techslides.com/50-javascript-libraries-and-plugins-for-maps
 http://stackoverflow.com/questions/16488884/add-svg-element-to-existing-svg-using-dom
 
 **add click listeners to all units**
+
+http://stackoverflow.com/questions/4070287/advice-for-creating-google-maps-like-interface
