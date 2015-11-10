@@ -45,7 +45,7 @@ http://www.smashingmagazine.com/2015/09/making-svg-maps-from-natural-earth-data/
 http://techslides.com/50-javascript-libraries-and-plugins-for-maps
 https://github.com/nvkelso/natural-earth-vector
 https://github.com/kartograph/kartograph.org/tree/master/showcase/italia
-
+http://www.creativebloq.com/netmag/create-responsive-svg-image-maps-51411831
 
 **Creating new SVG Nodes**
 
