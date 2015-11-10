@@ -20,6 +20,8 @@ Phase 3
   - joining the orders created in the app from Phase 1 with the svg map in Phase 2
 - alternatively, let players play on their own computer and communicate with each other with orders they create
 
+Features
+- ability to highlight provinces similar to http://jsfiddle.net/neveldo/TUYHN/
 
 **Resources Needed:**
 
