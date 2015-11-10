@@ -16,7 +16,8 @@ Limitations
 - one user will be responsible to move the pieces (ideally played on a large TV)
 
 Phase 3 
-- use Node.js or WebSockets to create piece moves, joining the app from Phase 1 with the svg map in Phase 2
+- use Node.js or WebSockets to create piece moves
+  - joining the orders created in the app from Phase 1 with the svg map in Phase 2
 - alternatively, let players play on their own computer and communicate with each other with orders they create
 
 
