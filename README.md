@@ -25,3 +25,4 @@ Phase 3
 
 https://msdn.microsoft.com/en-us/library/gg589508(v=vs.85).aspx
 https://github.com/ariutta/svg-pan-zoom
+http://bl.ocks.org/mbostock/3680999
