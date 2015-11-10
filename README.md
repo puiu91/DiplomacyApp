@@ -29,3 +29,5 @@ https://github.com/ariutta/svg-pan-zoom
 
 http://bl.ocks.org/mbostock/3680999
 
+http://samples.msdn.microsoft.com/workshop/samples/svg/zoomAndPan/zoomingAndPanning.html
+
