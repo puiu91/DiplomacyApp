@@ -44,6 +44,8 @@ http://www.w3.org/TR/SVG/propidx.html
 http://www.smashingmagazine.com/2015/09/making-svg-maps-from-natural-earth-data/
 http://techslides.com/50-javascript-libraries-and-plugins-for-maps
 https://github.com/nvkelso/natural-earth-vector
+https://github.com/kartograph/kartograph.org/tree/master/showcase/italia
+
 
 **Creating new SVG Nodes**
 
