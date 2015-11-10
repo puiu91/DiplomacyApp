@@ -31,3 +31,5 @@ http://bl.ocks.org/mbostock/3680999
 
 http://samples.msdn.microsoft.com/workshop/samples/svg/zoomAndPan/zoomingAndPanning.html
 
+http://pencilscoop.com/2014/03/svg-zoom-effects-with-internal-javascipt
+
