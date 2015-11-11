@@ -51,6 +51,8 @@ https://github.com/kartograph/kartograph.org/tree/master/showcase/italia
 
 http://www.creativebloq.com/netmag/create-responsive-svg-image-maps-51411831
 
+http://bl.ocks.org/mbostock/6123708
+
 **Creating new SVG Nodes**
 
 http://stackoverflow.com/questions/16488884/add-svg-element-to-existing-svg-using-dom
