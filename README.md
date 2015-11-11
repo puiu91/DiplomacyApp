@@ -42,16 +42,24 @@ http://www.w3.org/TR/SVG/propidx.html
 **For Mapping** 
 
 http://www.smashingmagazine.com/2015/09/making-svg-maps-from-natural-earth-data/
+
 http://techslides.com/50-javascript-libraries-and-plugins-for-maps
+
 https://github.com/nvkelso/natural-earth-vector
+
 https://github.com/kartograph/kartograph.org/tree/master/showcase/italia
+
 http://www.creativebloq.com/netmag/create-responsive-svg-image-maps-51411831
 
 **Creating new SVG Nodes**
 
 http://stackoverflow.com/questions/16488884/add-svg-element-to-existing-svg-using-dom
+
 http://sarasoueidan.com/blog/svg-transformations/
+
 http://stackoverflow.com/questions/10281732/js-svg-getctm-and-setctm
+
+http://bl.ocks.org/rkirsling/5001347
 
 **add click listeners to all units**
 
