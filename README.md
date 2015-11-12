@@ -47,6 +47,12 @@ http://techslides.com/50-javascript-libraries-and-plugins-for-maps
 
 https://github.com/nvkelso/natural-earth-vector
 
+**Important Threads on how to manipulate SVG**
+
+http://stackoverflow.com/questions/10349811/how-to-manipulate-translate-transforms-on-a-svg-element-with-javascript-in-chrom
+
+http://stackoverflow.com/questions/16810948/svg-transformations-in-javascript
+
 https://github.com/kartograph/kartograph.org/tree/master/showcase/italia
 
 http://www.creativebloq.com/netmag/create-responsive-svg-image-maps-51411831
