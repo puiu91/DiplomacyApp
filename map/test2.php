@@ -20,6 +20,9 @@
         <g id="viewport">
             <circle id="moveMe" cx="800" cy="282" r="80" fill="green" transform="translate(0,0)" />
         </g>
+
+        <circle id="s" cx="400" cy="282" r="80" fill="red" transform="translate(0,0)" />
+
     </svg>
 
     <script type="text/javascript">
@@ -45,6 +48,10 @@
             var viewportCTM = viewport.getCTM()
             var viewportTx 
             var viewportTy 
+            var viewportSx 
+            var viewportSy 
+
+
 
         function mouseDown(event) {
 
@@ -62,6 +69,7 @@
             p.y = event.clientY
 
             var CTM = this.getCTM()
+            debug(CTM)
 
             /**
              * get viewport tx ty
@@ -70,8 +78,12 @@
              viewportTx = viewportCTM.e
              viewportTy = viewportCTM.f
 
+             viewportSx = viewportCTM.a
+             viewportSy = viewportCTM.d
 
-            debug('VIEWPORT TX TY: ' + viewportTx + ' | ' + viewportTy)
+
+
+            debug('VIEWPORT TX TY: ' + viewportTx + ' | ' + viewportTy + ' ' + viewportSx + ' ' + viewportSy)
 
             // current transform (x, y) on the object
             var dragX = CTM.e
@@ -113,8 +125,8 @@
 
             debug(viewportTx)
 
-            pa.x = pa.x - nMouseOffsetX - viewportTx
-            pa.y = pa.y - nMouseOffsetY - viewportTy
+            pa.x = (pa.x - nMouseOffsetX - viewportTx) * 1/viewportSx
+            pa.y = (pa.y - nMouseOffsetY - viewportTy) * 1/viewportSy
 
             debug('Final: ' + pa.x + ' | ' + pa.y)
 

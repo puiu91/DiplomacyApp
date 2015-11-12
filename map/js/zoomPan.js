@@ -29,7 +29,7 @@ function panZoomSVG(svg) {
      * specified type will be dispatched to the registered listener before 
      * being dispatched to any EventTarget beneath it in the DOM tree
      */
-    // svg.addEventListener('mousewheel', handleMouseWheel)
+    svg.addEventListener('mousewheel', handleMouseWheel)
     svg.addEventListener('mousedown', handleMouseWheelDown)
     svg.addEventListener('mousemove', handleMouseMovement)
     svg.addEventListener('mouseup', handleMouseWheelUp)
@@ -85,7 +85,7 @@ function panZoomSVG(svg) {
          * SVGMatrix translate - Post-multiplies a translation transformation on the current matrix and 
          *                       returns the resulting matrix.
          */
-        var updatedCTM = viewport.getCTM().translate(x,y).scale(zoomFactor).translate(-x,-y)
+        var updatedCTM = viewport.getCTM().scale(zoomFactor)
 
         // update the viewport
         updateViewport(viewport, updatedCTM)
