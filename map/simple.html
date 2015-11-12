@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>D</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/dashboard.css">
+</head>
+
+<body>
+    <svg id="svgCanvas" version="1.1" baseProfile="full" xmlns="http://www.w3.org/2000/svg">
+        <g id="viewport">
+            <circle id="moveMe" cx="800" cy="282" r="80" fill="green"  />
+        </g>
+    </svg>
+
+    <script type="text/javascript">
+
+        function debug(obj) { console.dir(obj) }
+
+        var svg = document.getElementsByTagName('svg')[0]
+        var viewport = document.getElementById('viewport')
+
+        var circle = document.getElementById('moveMe')
+            circle.addEventListener('mousedown', mouseDown)
+
+            debug(viewport)
+
+
+
+
+
+
+
+
+
+
+
+        var el = null
+        var nMouseOffsetX = 0
+        var nMouseOffsetY = 0        
+
+        // var viewportCTM = viewport.getCTM()
+        var viewportTx = 0
+        var viewportTy = 0
+        var viewportSx = 0
+        var viewportSy = 0
+
+        /**
+         * Determines if an object contains the SVGTransform object in its SVGTransformList object, otherwise it creates
+         * and appends a new SVGTransform object
+         * 
+         * @param  {object} obj svg element being clicked on
+         * @return {boolean}
+         */
+        function containsSVGTransform(obj) {
+            // SVGTransformList of the element that has been clicked on
+            var tfmList = obj.transform.baseVal;
+
+            if (tfmList.numberOfItems === 0) 
+                return false
+
+            return true
+        }
+
+        /**
+         * Applies a transformation to an element
+         * 
+         * @param {[type]} el element
+         * @param {[type]} t  transformation
+         */
+        function setTransform(el, t) {
+            return el.transform.baseVal.initialize( t )
+        }
+
+
+
+
+
+
+        function mouseDown(event) {
+
+            // store the reference to the object being dragged
+            el = event.target
+
+            // store a reference to object clicked on (and presumably being dragged)
+            var obj = event.target
+   
+            // element is selected for the first time
+            if ( ! containsSVGTransform( obj )) {
+
+                // access the svg root element and create a new SVGTransform object 
+                var translate = svg.createSVGTransform()
+                // set default parameters
+                translate.setTranslate(0,0)              
+
+                // apply transformation
+                setTransform(obj, translate)
+            }
+
+            /**
+             * track cursor position on the <svg> element when the <g> object is clicked on
+             * 
+             * note - if we had instead placed the mousemove listener on the <g> object being clicked on, 
+             *        then the mouse cursor position will move faster than the <g> object's position can
+             *        be updated, essentially stopping the dragging but not actually removing the listener
+             */
+            svg.addEventListener('mousemove', mouseMove)
+
+            // end dragging
+            event.target.addEventListener('mouseup', mouseUp) 
+
+            // store mouse coordinates where drag event began
+            var originDrag = {
+                x : event.clientX,
+                y : event.clientY
+            }
+
+            // extract current transformation matrix of viewport
+            viewportCTM = viewport.getCTM()
+
+            // extract (sx, sy, tx, ty) from the matrix
+            viewportMatrix = {
+                tx : viewportCTM.e,
+                ty : viewportCTM.f,
+                sx : viewportCTM.a,
+                sy : viewportCTM.d
+            }
+
+            // get current transformation matrix of <g> element
+            elementCTM = this.getCTM()
+
+            // current (x,y) on the <g> element - equivalent to (tx,ty) in the matrix
+            var dragX = elementCTM.e
+            var dragY = elementCTM.f
+
+            /**
+             * calculate the offset as the difference between the mouse click (x,y)
+             * and the existing transform(x,y) on the object
+             *
+             * (i.e.,) if the mouse(x,y) = (60,60) and the existing transform(x,y) = (10,20)
+             *         then the offset(x,y) = (60-10,60-20) -> (50,40)
+             *
+             *         this offset then needs to be subtracted from the final mouse drag (x,y)
+             */
+            nMouseOffsetX = originDrag.x - dragX;
+            nMouseOffsetY = originDrag.y - dragY;
+
+            debug('Mouse Down Position: ' + originDrag.x + ' | ' + originDrag.y)
+            debug('DragX and DragY: ' + dragX + ' | ' + dragY)
+            debug('nMouseOffset: ' + nMouseOffsetX + ' | ' + nMouseOffsetY)
+        }
+
+        function mouseMove(evt) {
+
+            var pa = {}
+            pa.x = evt.clientX
+            pa.y = evt.clientY
+
+            debug('Mouse Moved to: ' + pa.x + ' | ' + pa.y)
+
+            debug( viewportMatrix )
+
+            debug(typeof viewportMatrix.tx)
+            debug(typeof pa.x)
+
+            debug(el.transform.baseVal)
+
+            pa.x = (pa.x - nMouseOffsetX - viewportMatrix.tx) * ( 1 / viewportMatrix.sx )
+            pa.y = (pa.y - nMouseOffsetY - viewportMatrix.ty) * ( 1 / viewportMatrix.sy )
+
+
+            // var CTM = CTM.translate(pa.x, pa.y)
+
+            debug('Final: ' + pa.x + ' | ' + pa.y)
+            debug(evt.target.getCTM())
+
+            debug('ANNEX')
+            currentCTM = evt.target.getCTM()
+            debug(currentCTM)
+
+
+            // set new translation (through SVG DOM)
+            el.transform.baseVal.getItem(0).setTranslate(pa.x, pa.y)
+            
+            // set new translation (through DOM)
+            // el.setAttribute("transform", "translate(" + pa.x + "," + pa.y + ")");
+        }
+
+        function mouseUp(event) {
+            nMouseOffsetX = 0
+            nMouseOffsetY = 0
+
+            // remove the mousemove listener from the svg container
+            svg.removeEventListener('mousemove', mouseMove)
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+    <!-- Javascript -->
+    <script src="js/zoomPan.js"></script>
+    <script type="text/javascript">
+        panZoomSVG(svg)
+    </script>
+
+</body>
+</html>
