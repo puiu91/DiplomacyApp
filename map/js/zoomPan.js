@@ -29,10 +29,10 @@ function panZoomSVG(svg) {
      * specified type will be dispatched to the registered listener before 
      * being dispatched to any EventTarget beneath it in the DOM tree
      */
-    svg.addEventListener('mousewheel', handleMouseWheel, true)
-    svg.addEventListener('mousedown', handleMouseWheelDown, true)
-    svg.addEventListener('mousemove', handleMouseMovement, true)
-    svg.addEventListener('mouseup', handleMouseWheelUp, true)
+    // svg.addEventListener('mousewheel', handleMouseWheel)
+    svg.addEventListener('mousedown', handleMouseWheelDown)
+    svg.addEventListener('mousemove', handleMouseMovement)
+    svg.addEventListener('mouseup', handleMouseWheelUp)
 
     /**
      * Updates the viewport with provided CTM matrix
@@ -118,6 +118,8 @@ function panZoomSVG(svg) {
 
         // only handle the mouse movement when panning is enabled
         if ( ! panningActive) return
+
+            debug(mouseX)
 
         // translate svg viewport using the panning event origin subtracted from the current mouse event position
         var adjustedCTM = viewport.getCTM().translate(mouseX - panningOrigin.x, mouseY - panningOrigin.y)

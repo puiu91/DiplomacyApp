@@ -1,0 +1,793 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"Original",
+				"originalRowPosition"
+			],
+			[
+				"Table",
+				"tableBody"
+			],
+			[
+				"TB",
+				"TbodyRows"
+			],
+			[
+				"TBo",
+				"TbodyRows"
+			],
+			[
+				"proto",
+				"prototype"
+			],
+			[
+				"for",
+				"for	for (…) {…}"
+			],
+			[
+				"Tbody",
+				"TbodyRows"
+			],
+			[
+				"tableH",
+				"tableHeadRowsContent"
+			],
+			[
+				"inel",
+				"inline-block"
+			],
+			[
+				"inl",
+				"inline-block"
+			],
+			[
+				"padd",
+				"padding-left"
+			],
+			[
+				"j",
+				"jqXHR"
+			],
+			[
+				"tr",
+				"true"
+			],
+			[
+				"res",
+				"response"
+			],
+			[
+				"formatted",
+				"formatted_address"
+			],
+			[
+				"progre",
+				"progressSpinner"
+			],
+			[
+				"bookma",
+				"bookmark_info"
+			],
+			[
+				"resu",
+				"results"
+			],
+			[
+				"datepick",
+				"datepicker"
+			],
+			[
+				"result",
+				"resultTable"
+			],
+			[
+				"filter-offi",
+				"filter-officer-button"
+			],
+			[
+				"URL_H",
+				"URL_HTTP_API"
+			],
+			[
+				"RAWURL",
+				"rawurlencode"
+			],
+			[
+				"html",
+				"htmlspecialchars"
+			],
+			[
+				"ht",
+				"htmlentities"
+			],
+			[
+				"responseFiel",
+				"responseFields2"
+			],
+			[
+				"add",
+				"address_details"
+			],
+			[
+				"addres",
+				"addressExists"
+			],
+			[
+				"potsa",
+				"postal_code"
+			],
+			[
+				"admins",
+				"administrative_area"
+			],
+			[
+				"quer",
+				"queryString"
+			],
+			[
+				"address",
+				"address_csv"
+			],
+			[
+				"respon",
+				"json_response"
+			],
+			[
+				"occu",
+				"occurrences_with_individuals"
+			],
+			[
+				"unqu",
+				"unique_occurrence_ids"
+			],
+			[
+				"unq",
+				"unique_occurrence_ids"
+			],
+			[
+				"unique",
+				"unique_occurrence_ids"
+			],
+			[
+				"uniq",
+				"unique_occurrence_id"
+			],
+			[
+				"UTM_coo",
+				"UTM_coord_exploded"
+			],
+			[
+				"fromUtm",
+				"fromUTMtoLatLon"
+			],
+			[
+				"if",
+				"if	if …"
+			],
+			[
+				"sm_Ec",
+				"stream_encoding"
+			],
+			[
+				"strepla",
+				"str_replace"
+			],
+			[
+				"va",
+				"values_array"
+			],
+			[
+				"prett",
+				"pretty_print"
+			],
+			[
+				"FOOTPOI",
+				"FootpointLatitude"
+			],
+			[
+				"FootPoint",
+				"FootpointLatitude"
+			],
+			[
+				"Map",
+				"MapXYToLatLon"
+			],
+			[
+				"UTM",
+				"UTMCentralMeridian"
+			],
+			[
+				"MenuMana",
+				"MenuManagerModel"
+			],
+			[
+				"menu",
+				"menumanager	(MenuManagerController.php)"
+			],
+			[
+				"menuMa",
+				"MenuManagerModel"
+			],
+			[
+				"statemen",
+				"statements	(sql_commands.sql)"
+			],
+			[
+				"Login",
+				"LoginCheckComponent"
+			],
+			[
+				"error",
+				"errorsArray"
+			],
+			[
+				"retreive",
+				"retrieveCredentials"
+			],
+			[
+				"retri",
+				"retrieveUsernamePassword"
+			],
+			[
+				"Appl",
+				"ApplicationInterfaceLayer"
+			],
+			[
+				"REQUEST",
+				"REQUEST_URI	(application.php)"
+			],
+			[
+				"post",
+				"postData"
+			],
+			[
+				"FOrm",
+				"FormValidator"
+			],
+			[
+				"explod",
+				"explodePhoneNumber"
+			],
+			[
+				"extra",
+				"extractedPhoneType"
+			],
+			[
+				"urlA",
+				"urlAppendedPhonelookup"
+			],
+			[
+				"ext",
+				"extractedAddress"
+			],
+			[
+				"morningst",
+				"morningstarNewURL"
+			],
+			[
+				"morning",
+				"morningstarBaseURL"
+			],
+			[
+				"sub",
+				"subarray"
+			],
+			[
+				"met",
+				"method"
+			],
+			[
+				"me",
+				"method"
+			],
+			[
+				"Cate",
+				"CategoriesAndStations"
+			],
+			[
+				"cate",
+				"category_or_station_name"
+			],
+			[
+				"sear",
+				"search_string"
+			],
+			[
+				"url_app",
+				"url_appended_411"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 400.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"sublimelinter: ",
+				"SublimeLinter: Next Error"
+			],
+			[
+				"instll",
+				"Package Control: Install Package"
+			],
+			[
+				"install pack",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 536.0
+	},
+	"console":
+	{
+		"height": 260.0,
+		"history":
+		[
+			"url",
+			"echo \"test\";",
+			"echo \"test\"",
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/newinterface",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/newinterface/css",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/newinterface/js"
+	],
+	"file_history":
+	[
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/newinterface/js/tablesort.js",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/newinterface/index.php",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/newinterface/css/dashboard.css",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/GoogleMapsGeocoderInterface/dist/js/custom.js",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/GoogleMapsGeocoderInterface/dist/css/custom/page-elements.css",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/GoogleMapsGeocoderInterface/php/classes/GoogleMapsGeocoder.class.php",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/GoogleMapsGeocoderInterface/php/ajax/geocode.php",
+		"/C/Users/hrps09806/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/GoogleMapsGeocoderInterface/index.php",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/GoogleMapsGeocoderInterface/dist/js/npm.js",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/GeocoderService/address-cleanup.php",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/GoogleMapsGeocoder/address-cleanup.php",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/GoogleMapsGeocoderInterface/dist/css/custom/fixes.css",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/GoogleMapsGeocoderInterface/dist/js/polyfills/closest.js",
+		"/C/Users/hrps09806/Downloads/waypoints.gpx",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/InCar Dashcam/dist/js/views/index.js",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/GoogleMapsGeocoderInterface/data/sample.json",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/GoogleMapsGeocoderInterface/datawriter.php",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/GoogleMapsGeocoder/classes/GoogleMapsGeocoder.class.php",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/GoogleMapsGeocoder/index.php",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/GoogleMapsGeocoder/functions/functions.php",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/GoogleMapsGeocoderInterface/dist/json/people.json",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/GoogleMapsGeocoderInterface/dist/js/views/index.js",
+		"/C/Users/hrps09806/AppData/Roaming/Sublime Text 3/Packages/Default/Default (Windows).sublime-keymap",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/GoogleMapsGeocoderInterface/php/functions/functions.php",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/GoogleMapsGeocoderInterface/test.php",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/GoogleMapsGeocoderInterface/data/sample2.json",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/frontline/warrants.php",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/GoogleMapsGeocoder/halton dataset/live/prepared.csv",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/GoogleMapsGeocoder/halton dataset/live/backup/prepared.csv",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/GoogleMapsGeocoder/halton dataset/live/failed-addresses.csv",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/GoogleMapsGeocoder/classes/unitTests/case_8.php",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/GoogleMapsGeocoder/classes/unitTests/case_6.php",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/GoogleMapsGeocoder/classes/unitTests/case_7.php",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/GoogleMapsGeocoder/classes/unitTests/case_2.php",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/GoogleMapsGeocoder/classes/unitTests/default.php",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/GoogleMapsGeocoder/classes/unitTests/cases.csv",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/GoogleMapsGeocoder/classes/unitTests/case_1.php",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/GoogleMapsGeocoder/halton dataset/live/New folder/prepared.csv",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/GoogleMapsGeocoder/data/data_test.csv",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/GoogleMapsGeocoder/halton dataset/live data sample.csv",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/GoogleMapsGeocoder/json_output.json",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/GoogleMapsGeocoder/download-csv.php",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/InCar Dashcam/index.php",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/InCar Dashcam/dist/js/jquery/pagination/jquery.simplePagination.js",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/InCar Dashcam/database-live.php",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/InCar Dashcam/Annotate2/detail-original.php",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/InCar Dashcam/data-export-json.php",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/InCar Dashcam/dist/js/views/objects.txt",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/InCar Dashcam/dist/js/views/ajax.txt",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/InCar Dashcam/video_details.php",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/InCar Dashcam/dist/css/custom/fixes.css",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/InCar Dashcam/dist/css/custom/page-elements.css",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/InCar Dashcam/dist/css/custom/navbar.css",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/InCar Dashcam/dist/js/functions.js",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/InCar Dashcam/application/models/search.php",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/InCar Dashcam/data-export-backup.php",
+		"/C/Users/hrps09806/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/InCar Dashcam/dist/css/custom/jQuery-ui-custom.css",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/InCar Dashcam/application/models/credentials_testing.php",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/InCar Dashcam/Annotate2/library/Annotate2/DataMapper/AbstractDataMapper.php",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/InCar Dashcam/Annotate2/library/Annotate2/DataMapper/DataMapperInterface.php",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/InCar Dashcam/Annotate2/library/Annotate2/DatabaseAdapter/DatabaseAdapterInterface.php",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/InCar Dashcam/Annotate2/library/Annotate2/DataMapper/AddressDataMapper.php",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/InCar Dashcam/Annotate2/library/Annotate2/DatabaseAdapter/UniversalDatabaseAdapter.php",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/InCar Dashcam/Annotate2/_config.php",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/InCar Dashcam/application/config/config.php",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/InCar Dashcam/application/config/database.php",
+		"/C/Users/hrps09806/Documents/Programming/Learning-MVC-master/application/models/RecipesModel.php",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/InCar Dashcam/Annotate2/library/database2.class.php",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/InCar Dashcam/application/functions/functions.php",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/InCar Dashcam/Annotate2/library/autoload.php",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/InCar Dashcam/Annotate2/library/Annotate2/Helper/NicheHelper.php",
+		"/C/Users/hrps09806/Documents/Programming/Learning-MVC-master/application/core/View.php",
+		"/C/Users/hrps09806/Documents/Programming/Learning-MVC-master/application/core/Model.php",
+		"/C/Users/hrps09806/Documents/Programming/Learning-MVC-master/application/views/templates/dashboard/sidebar.php",
+		"/C/Users/hrps09806/Documents/Programming/Learning-MVC-master/application/core/Helper.php",
+		"/C/Users/hrps09806/Documents/Programming/Learning-MVC-master/application/views/templates/index/content.php",
+		"/C/Users/hrps09806/Documents/Programming/Learning-MVC-master/application/views/templates/login/header.php",
+		"/C/Users/hrps09806/Documents/Programming/Learning-MVC-master/application/views/templates/feedback.php",
+		"/C/Users/hrps09806/Documents/Programming/Learning-MVC-master/application/config/ConfigDatabase.php",
+		"/C/Users/hrps09806/Documents/Programming/Learning-MVC-master/application/config/Database.php",
+		"/C/Users/hrps09806/Documents/Programming/Learning-MVC-master/application/models/SignageGeneratorModel.php",
+		"/C/Users/hrps09806/Documents/Programming/Learning-MVC-master/application/models/LoginModel.php",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/InCar Dashcam/Annotate2/library/Annotate2/Exception/MSSQLDatabaseAdapterException.php",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/InCar Dashcam/Annotate2/index.php",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/InCar Dashcam/Annotate2/detail.php",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/InCar Dashcam/Annotate2/_messages.php",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/InCar Dashcam/Annotate2/_details_nearby.php",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/InCar Dashcam/Annotate2/index-responsive-looks-like-crap.php",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/InCar Dashcam/Annotate2/library/PHPExcel.php",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/InCar Dashcam/Annotate2/_layout.php",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/InCar Dashcam/data.php",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/InCar Dashcam/dist/js/bootstrap.js",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/InCar Dashcam/data-export.php",
+		"/E/!!!/InCar Dashcam/data-export.php",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/InCar Dashcam/dist/css/custom/jQuery-ui.css",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/InCar Dashcam/php/classes/arrayTableHTML.php",
+		"/E/!!!/InCar Dashcam/dist/js/views/index.js",
+		"/E/!!!/InCar Dashcam/index.php",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/InCar Dashcam/dist/css/bootstrap.css",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/InCar Dashcam/people.json",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/InCar Dashcam/people.txt",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/InCar Dashcam/dist/json/people.json",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/InCar Dashcam/Learning-MVC-master/Learning-MVC-master/Learning-MVC-master/application/assets/css/custom.css",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/InCar Dashcam/Learning-MVC-master/Learning-MVC-master/Learning-MVC-master/application/views/menumanager/managemenus/content.php",
+		"/C/Users/hrps09806/Documents/Installation/Light Servers/zwamp-x64-2.2.1/vdrive/.sys/php/info.php",
+		"/E/slim/vendor/autoload.php",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/Geocoordinate Converter/classes/utm.class.php",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/Geocoordinate Converter/unit test/test.php",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/GoogleMapsGeocoder/requestme.php",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/GoogleMapsGeocoder/requests-testing.php",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/GoogleMapsGeocoder/halton dataset/requests-testing.php",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/Annotate2/_layout.php",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/playback/index.php",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/Annotate2/index.php",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/playback/_whitelist.php",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/playback/_config.php",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/v2/index.php",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/library/ti.class.php",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/library/geocoder/Geocoder/Geocoder.php",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/GoogleMapsGeocoder/map.php",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/Geoocoordinate Converter/classes/utm.class.php",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/GoogleMapsGeocoder/class/unitTests/test.php",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!utm_converter/GoogleMapsGeocoder/address-cleanup.php",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!utm_converter/GoogleMapsGeocoder/data_test.csv",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!utm_converter/GoogleMapsGeocoder/classes/GoogleMapsGeocoder.class.php",
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!utm_converter/GoogleMapsGeocoder/classes/unitTests/test.php"
+	],
+	"find":
+	{
+		"height": 38.0
+	},
+	"find_in_files":
+	{
+		"height": 181.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			".table-condensed",
+			"table-striped",
+			"table",
+			"ajaxGeocode",
+			"results",
+			"target2",
+			"coverme",
+			"progress-spinner",
+			"							<div id=\"target2\" class=\"panel-body\">\ntarget2",
+			"target2",
+			"progressSpinner",
+			"this.closes",
+			"progress-spinner",
+			"center",
+			"progress-spinner",
+			"progressSpinner",
+			"response",
+			"spinner",
+			"id=\"response\"",
+			"results",
+			"url",
+			"testing",
+			"\"cut\"",
+			"del",
+			"readfile",
+			"AP",
+			"print_array",
+			"geocodeResponse",
+			"url_encode",
+			"url",
+			"administrative_area_level_2",
+			"getGeocodeResponse",
+			"#303",
+			"\n#303",
+			"\n#303b",
+			"\n\n\n\n#303b",
+			"\n\n\n\n224 Martin St #303b",
+			"\n\n\n\n224 Martin St #303b ",
+			"224 MARTIN",
+			"224 martin",
+			"224 MARTIN ST UN 303B",
+			"setComponentFilters",
+			"$this->address",
+			"-",
+			"AP",
+			"UN",
+			"-",
+			"unit_num",
+			"-",
+			"retrieveAddressDetails",
+			"read_CSV",
+			"true",
+			"setAddress",
+			"createAddressString",
+			"geocodeUrl",
+			"geocode",
+			"addressExists",
+			"isPartialResponse",
+			"print_array",
+			"isPartialResponse",
+			"retrieveAddressDetails",
+			"header",
+			"Main Street North",
+			"94 Main St N #4, Acton, ON L7J 1W2, Canada",
+			"setComponentFilters",
+			"print_array",
+			"proper",
+			"actual_dataset",
+			"setComponentFilters",
+			"toggleBootstrapHidden",
+			"alertWriter",
+			"show(table",
+			"DataTable",
+			"displayHTML",
+			"empty",
+			"example",
+			"DataTable",
+			"info",
+			"message goes here",
+			"message goes ehre",
+			"error message goes here",
+			"alert",
+			"table",
+			"debug",
+			"alertwriter",
+			"No results found, try again.",
+			"table.hide()",
+			"table.hide();",
+			"	 		table.hide();",
+			"	 		table.hide();\ntable.hide();",
+			"table.hide();",
+			"hide()",
+			"table",
+			".hide()",
+			".table",
+			"jQuery( '.table' ).",
+			"jQuery( '.table' )",
+			"jQuery( '.table' ).",
+			"displayHTML",
+			"toggleBootstrapHidden",
+			"alertWriter",
+			"$t",
+			"MSSQLDatabaseAdapterException",
+			"connect",
+			"adapter",
+			"_adapter",
+			"oInit",
+			"displayhtml",
+			"alertWriter",
+			"toggleBootstrapHidden",
+			"alertWriter",
+			"progressSpinner",
+			"error",
+			"ajaxHandler",
+			"emulateTransitionEnd",
+			"transition",
+			"support.transition",
+			"click.bs.alert",
+			"body",
+			"toggleBootstrapHidden",
+			"ajaxHandler",
+			"progressSpinner",
+			"alert",
+			"progressSpinner",
+			"close",
+			"alerts",
+			"filterCollector",
+			"progressSpinner"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"sales"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": false
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		},
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 21.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.5,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "project.sublime-project",
+	"replace":
+	{
+		"height": 38.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"navbar",
+				"application\\views\\templates\\navbar_alt.php"
+			],
+			[
+				"custom",
+				"application\\assets\\css\\custom.css"
+			],
+			[
+				"register",
+				"app\\register.php"
+			],
+			[
+				"database_pdo",
+				"app\\webhost_db_data\\database_pdo.php"
+			],
+			[
+				"databse",
+				"app\\webhost_db_data\\database_pdo.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 400.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"attr"
+			]
+		],
+		"width": 496.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 314.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

@@ -1,0 +1,51 @@
+.edit-profile {
+	label {
+		display: block;
+	}
+
+	button, input[type="submit"] {
+		margin-top: 1.5em;
+	}
+}
+
+.map-creation-form, .game-creation-form {
+	border: solid 1px;
+	padding: 0.25em 0.5em;
+
+	label {
+		display: flex;
+		margin-top: 0.25em;
+		align-items: center;
+
+		span {
+			flex-basis: 7em;
+		}
+		input {
+			flex: 1;
+		}
+	}
+
+	input[type='submit'] {
+		display: block;
+		margin: 0.5em auto 0.25em;
+	}
+}
+
+.game-creation-form label span {
+	flex-basis: 10em;
+}
+
+.raw-list {
+	.one-map {
+		margin-bottom: 1em;
+	}
+	div + div {
+		margin-top: 0.5em;
+	}
+	button {
+		margin-top: 0.5em;
+	}
+	span:first-child {
+		font-weight: bold;
+	}
+}
