@@ -22,7 +22,7 @@ function panZoomSVG(svg) {
      * Coefficient that dictates the velocity of panning - a higher number slows panning
      * @type {int}
      */
-    var panningSmoother = 20
+    var panningSmoother = 40
 
     /**
      * add event listeners with useCapture true so that  all events of the 
