@@ -22,7 +22,7 @@ function panZoomSVG(svg) {
      * Coefficient that dictates the velocity of panning - a higher number slows panning
      * @type {int}
      */
-    var panningSmoother = 60
+    var panningSmoother = 20
 
     /**
      * add event listeners with useCapture true so that  all events of the 
@@ -85,7 +85,7 @@ function panZoomSVG(svg) {
          * SVGMatrix translate - Post-multiplies a translation transformation on the current matrix and 
          *                       returns the resulting matrix.
          */
-        var updatedCTM = viewport.getCTM().scale(zoomFactor)
+        var updatedCTM = viewport.getCTM().translate(x,y).scale(zoomFactor).translate(-x,-y)
 
         // update the viewport
         updateViewport(viewport, updatedCTM)

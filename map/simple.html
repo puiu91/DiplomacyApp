@@ -31,27 +31,18 @@
         var circle = document.getElementById('moveMe')
             circle.addEventListener('mousedown', mouseDown)
 
-            debug(viewport)
+
+
+
+
+        function SVGDragElements(svg) {
+            
+        }
 
 
 
 
 
-
-
-
-
-
-
-        var el = null
-        var nMouseOffsetX = 0
-        var nMouseOffsetY = 0        
-
-        // var viewportCTM = viewport.getCTM()
-        var viewportTx = 0
-        var viewportTy = 0
-        var viewportSx = 0
-        var viewportSy = 0
 
         /**
          * Determines if an object contains the SVGTransform object in its SVGTransformList object, otherwise it creates
@@ -73,36 +64,29 @@
         /**
          * Applies a transformation to an element
          * 
-         * @param {[type]} el element
-         * @param {[type]} t  transformation
+         * @param {object} el an SVG element
+         * @param {object} t  transformation
          */
         function setTransform(el, t) {
             return el.transform.baseVal.initialize( t )
         }
 
-
-
-
-
-
         function mouseDown(event) {
 
-            // store the reference to the object being dragged
+            // store a reference to object clicked on (and presumably being dragged)
             el = event.target
 
-            // store a reference to object clicked on (and presumably being dragged)
-            var obj = event.target
-   
             // element is selected for the first time
-            if ( ! containsSVGTransform( obj )) {
+            if ( ! containsSVGTransform( el )) {
 
                 // access the svg root element and create a new SVGTransform object 
                 var translate = svg.createSVGTransform()
+
                 // set default parameters
                 translate.setTranslate(0,0)              
 
                 // apply transformation
-                setTransform(obj, translate)
+                setTransform(el, translate)
             }
 
             /**
@@ -118,7 +102,7 @@
             event.target.addEventListener('mouseup', mouseUp) 
 
             // store mouse coordinates where drag event began
-            var originDrag = {
+            var dragOrigin = {
                 x : event.clientX,
                 y : event.clientY
             }
@@ -138,66 +122,47 @@
             elementCTM = this.getCTM()
 
             // current (x,y) on the <g> element - equivalent to (tx,ty) in the matrix
-            var dragX = elementCTM.e
-            var dragY = elementCTM.f
+            var activeTranslate = {
+                x : elementCTM.e,
+                y : elementCTM.f
+            }
 
-            /**
-             * calculate the offset as the difference between the mouse click (x,y)
-             * and the existing transform(x,y) on the object
-             *
-             * (i.e.,) if the mouse(x,y) = (60,60) and the existing transform(x,y) = (10,20)
-             *         then the offset(x,y) = (60-10,60-20) -> (50,40)
-             *
-             *         this offset then needs to be subtracted from the final mouse drag (x,y)
-             */
-            nMouseOffsetX = originDrag.x - dragX;
-            nMouseOffsetY = originDrag.y - dragY;
+            // calculate the offset as the difference between the mouse click (x,y)
+            // and the existing transform(x,y) on the object
+            mouseOffset = {
+                x : (dragOrigin.x - activeTranslate.x),
+                y : (dragOrigin.y - activeTranslate.y)
+            }
 
-            debug('Mouse Down Position: ' + originDrag.x + ' | ' + originDrag.y)
-            debug('DragX and DragY: ' + dragX + ' | ' + dragY)
-            debug('nMouseOffset: ' + nMouseOffsetX + ' | ' + nMouseOffsetY)
+            // debugging
+            // debug('Mouse Down Start (x,y): ' + dragOrigin.x + ' | ' + dragOrigin.y)
+            // debug('DragX & DragY: ' + activeTranslate.x + ' | ' + activeTranslate.y)
+            // debug('Mouse Offset: ' + mouseOffset.x + ' | ' + mouseOffset.y)
         }
 
-        function mouseMove(evt) {
+        function mouseMove(event) {
 
-            var pa = {}
-            pa.x = evt.clientX
-            pa.y = evt.clientY
+            // store mouse coordinates where drag event ends
+            dragEnd = {
+                x: event.clientX,
+                y: event.clientY
+            }
 
-            debug('Mouse Moved to: ' + pa.x + ' | ' + pa.y)
+            // debugging
+            // debug('Mouse Down End (x,y): ' + dragEnd.x + ' | ' + dragEnd.y)
 
-            debug( viewportMatrix )
-
-            debug(typeof viewportMatrix.tx)
-            debug(typeof pa.x)
-
-            debug(el.transform.baseVal)
-
-            pa.x = (pa.x - nMouseOffsetX - viewportMatrix.tx) * ( 1 / viewportMatrix.sx )
-            pa.y = (pa.y - nMouseOffsetY - viewportMatrix.ty) * ( 1 / viewportMatrix.sy )
-
-
-            // var CTM = CTM.translate(pa.x, pa.y)
-
-            debug('Final: ' + pa.x + ' | ' + pa.y)
-            debug(evt.target.getCTM())
-
-            debug('ANNEX')
-            currentCTM = evt.target.getCTM()
-            debug(currentCTM)
-
+            // calculate the final coordinates of the element and adjust for viewport transformation and scale
+            dragEnd.x = (dragEnd.x - mouseOffset.x - viewportMatrix.tx) * (1 / viewportMatrix.sx)
+            dragEnd.y = (dragEnd.y - mouseOffset.y - viewportMatrix.ty) * (1 / viewportMatrix.sy)
+            
+            // debugging
+            // debug('Final Position: ' + dragEnd.x + ' | ' + dragEnd.y)
 
             // set new translation (through SVG DOM)
-            el.transform.baseVal.getItem(0).setTranslate(pa.x, pa.y)
-            
-            // set new translation (through DOM)
-            // el.setAttribute("transform", "translate(" + pa.x + "," + pa.y + ")");
+            el.transform.baseVal.getItem(0).setTranslate(dragEnd.x, dragEnd.y)
         }
 
         function mouseUp(event) {
-            nMouseOffsetX = 0
-            nMouseOffsetY = 0
-
             // remove the mousemove listener from the svg container
             svg.removeEventListener('mousemove', mouseMove)
         }
