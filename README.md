@@ -80,3 +80,14 @@ https://mdn.mozillademos.org/files/5031/draggable_elements.html
 
 
 https://developer.mozilla.org/en/docs/Web/API/SVGTransformList
+
+
+**Ideas**
+
+- one database holds details on ownership of each province
+- users have "load" button to send an ajax request to retrieve the latest province ownership details in the database
+- each svg path is given an id that matches in the database
+- troop state done in similar method
+- each player puts troops on screen and saves, players then refresh to broadcast updates
+- javascript interprets the results
+- players use seperate computers to move elements
