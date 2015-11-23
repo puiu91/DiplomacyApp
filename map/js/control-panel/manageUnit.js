@@ -2,7 +2,7 @@ var manageUnit = (function() {
 
     'use strict'
 
-    // references to UI components as DOM elements
+    // references DOM elements which are the UI components
     var modals = {
       manageUnit: document.getElementById('manageUnitModal')
     }
