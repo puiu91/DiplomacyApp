@@ -32,9 +32,11 @@ var manageUnit = (function() {
      */
     function manageUnit(e) {
 
+      var eventTarget = e.target
+
       // determine element clicked and extract row index
-      if (e.target.nodeName === 'BUTTON' || e.target.nodeName === 'I') {
-        rowIndex = searchParentNodeForElement(event.target, 'TR').rowIndex      
+      if (eventTarget.nodeName === 'BUTTON' || eventTarget.nodeName === 'I') {
+        rowIndex = searchParentNodeForElement(eventTarget, 'TR').rowIndex      
       } else {
         return
       }
@@ -42,6 +44,7 @@ var manageUnit = (function() {
       // extract cells in the row that the clicked button belongs to
       row = tables.unitOrders.rows[rowIndex].cells
 
+      // store current unit info
       var unitInfo = 
       {
           gameDataIndex: 
