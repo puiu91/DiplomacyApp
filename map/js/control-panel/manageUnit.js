@@ -2,7 +2,7 @@ var manageUnit = (function() {
 
     'use strict'
 
-    // references to DOM elements
+    // references to UI components as DOM elements
     var modals = {
       manageUnit: document.getElementById('manageUnitModal')
     }
@@ -17,26 +17,15 @@ var manageUnit = (function() {
       unitOrders: document.getElementById('orderTable')
     }
 
-    /**
-     * Store UI components
-     */
-    var manageUnitButtons = document.querySelectorAll('[ui-role = manageUnit]')
-    var manageUnitModal   = document.getElementById('manageUnitModal')
-    var updateUnitButton  = document.querySelectorAll('[ui-role = updateUnit]')[0]
-    var deleteUnitButton  = document.querySelectorAll('[ui-role = deleteUnit]')[0]
+    var selects = {
+      unitOrder: document.querySelectorAll('[unit-update = unitOrder]')[0],
+      currentProvince: document.querySelectorAll('[unit-update = unitProvince]')[0],
+      targetProvince: document.querySelectorAll('[unit-update = unitTargetProvince]')[0]
+    }
 
-    /**
-     * Store select dropdowns
-     */
-    var updateUnitOrder       = document.querySelectorAll('[unit-update = unitOrder]')[0]
-    var updateCurrentProvince = document.querySelectorAll('[unit-update = unitProvince]')[0]
-    var updateTargetProvince  = document.querySelectorAll('[unit-update = unitTargetProvince]')[0]
-
-    /**
-     * Store parent row of unit being managed
-     */
-    var rowIndex
+    // store parent row of unit being managed
     var row
+    var rowIndex
 
     /**
      * Handles extraction of unit information to populate the manage unit modal
@@ -71,9 +60,9 @@ var manageUnit = (function() {
         modals.manageUnit.classList.add('visible')
 
         // set select fields with unit info attributes as selected elements
-        updateUnitOrder.options.selectedIndex       = unitInfo.gameDataIndex.order
-        updateCurrentProvince.options.selectedIndex = unitInfo.gameDataIndex.province
-        updateTargetProvince.options.selectedIndex  = unitInfo.gameDataIndex.targetProvince
+        selects.unitOrder.options.selectedIndex       = unitInfo.gameDataIndex.order
+        selects.currentProvince.options.selectedIndex = unitInfo.gameDataIndex.province
+        selects.targetProvince.options.selectedIndex  = unitInfo.gameDataIndex.targetProvince
     }
 
     /**
@@ -82,20 +71,20 @@ var manageUnit = (function() {
     function updateUnit () {
 
         // get unit updates
-        var unitUpdates = {
-
-            gameDataIndex: {
-                order: updateUnitOrder.options.selectedIndex,
-                province: updateCurrentProvince.options.selectedIndex,
-                targetProvince: updateTargetProvince.options.selectedIndex
+        var unitUpdates = 
+        {
+            gameDataIndex: 
+            {
+                order: selects.unitOrder.options.selectedIndex,
+                province: selects.currentProvince.options.selectedIndex,
+                targetProvince: selects.targetProvince.options.selectedIndex
             },     
-
-            values: {
-                order: updateUnitOrder.options[updateUnitOrder.selectedIndex].value,
-                province: updateCurrentProvince.options[updateCurrentProvince.selectedIndex].value,
-                targetProvince: updateTargetProvince.options[updateTargetProvince.selectedIndex].value
+            values: 
+            {
+                order: selects.unitOrder.options[selects.unitOrder.selectedIndex].value,
+                province: selects.currentProvince.options[selects.currentProvince.selectedIndex].value,
+                targetProvince: selects.targetProvince.options[selects.targetProvince.selectedIndex].value
             }
-
         }
 
         // update original row with new unit values 
@@ -127,7 +116,7 @@ var manageUnit = (function() {
         function communicateServerDeleteUnit() {}
         
         // hide modal
-        manageUnitModal.classList.remove('visible')   
+        modals.manageUnit.classList.remove('visible')   
     }
 
     /**
