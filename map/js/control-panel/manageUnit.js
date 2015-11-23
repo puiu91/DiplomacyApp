@@ -30,39 +30,46 @@ var manageUnit = (function() {
     /**
      * Handles extraction of unit information to populate the manage unit modal
      */
-    function manageUnit(e, rowIndex) {
+    function manageUnit(e) {
 
-        // extract cells in the row that the clicked button belongs to
-        row = tables.unitOrders.rows[rowIndex].cells
+      // determine element clicked and extract row index
+      if (e.target.nodeName === 'BUTTON' || e.target.nodeName === 'I') {
+        rowIndex = searchParentNodeForElement(event.target, 'TR').rowIndex      
+      } else {
+        return
+      }
 
-        var unitInfo = 
-        {
-            gameDataIndex: 
-            {
-               type           : row[0].attributes['gameDataIndex'].textContent,
-               order          : row[1].attributes['gameDataIndex'].textContent,
-               province       : row[2].attributes['gameDataIndex'].textContent,
-               targetProvince : row[3].attributes['gameDataIndex'].textContent
-            },     
-            values: 
-            {
-                type           : row[0].textContent,
-                order          : row[1].textContent,
-                province       : row[2].textContent,
-                targetProvince : row[3].textContent
-            }
-        }
+      // extract cells in the row that the clicked button belongs to
+      row = tables.unitOrders.rows[rowIndex].cells
 
-        // todo | block out rest of window to prevent clicking  
-        // todo | checking if unit type allows a change in province
+      var unitInfo = 
+      {
+          gameDataIndex: 
+          {
+             type           : row[0].attributes['gameDataIndex'].textContent,
+             order          : row[1].attributes['gameDataIndex'].textContent,
+             province       : row[2].attributes['gameDataIndex'].textContent,
+             targetProvince : row[3].attributes['gameDataIndex'].textContent
+          },     
+          values: 
+          {
+              type           : row[0].textContent,
+              order          : row[1].textContent,
+              province       : row[2].textContent,
+              targetProvince : row[3].textContent
+          }
+      }
 
-        // display modal
-        modals.manageUnit.classList.add('visible')
+      // todo | block out rest of window to prevent clicking  
+      // todo | checking if unit type allows a change in province
 
-        // set select fields with unit info attributes as selected elements
-        selects.unitOrder.options.selectedIndex       = unitInfo.gameDataIndex.order
-        selects.currentProvince.options.selectedIndex = unitInfo.gameDataIndex.province
-        selects.targetProvince.options.selectedIndex  = unitInfo.gameDataIndex.targetProvince
+      // display modal
+      modals.manageUnit.classList.add('visible')
+
+      // set select fields with unit info attributes as selected elements
+      selects.unitOrder.options.selectedIndex       = unitInfo.gameDataIndex.order
+      selects.currentProvince.options.selectedIndex = unitInfo.gameDataIndex.province
+      selects.targetProvince.options.selectedIndex  = unitInfo.gameDataIndex.targetProvince
     }
 
     /**
@@ -145,16 +152,7 @@ var manageUnit = (function() {
      * them event listener click handlers. 
      */
     tables.unitOrders.addEventListener('click', function() {
-
-      var nodeName = event.target.nodeName
-      
-      // determine element clicked and extract row index
-      if (nodeName === 'BUTTON' || nodeName === 'I') {
-        rowIndex = searchParentNodeForElement(event.target, 'TR').rowIndex
-        
-        // send information to manage unit handler
-        manageUnit(event, rowIndex)        
-      };
+      manageUnit(event)
     }, false)
 
     // add event listener to update unit button
