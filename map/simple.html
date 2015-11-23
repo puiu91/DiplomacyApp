@@ -10,69 +10,420 @@
     <title>D</title>
 
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous"> -->
+    
+    <!-- CSS | Table -->
+    <link rel="stylesheet" type="text/css" href="css/components/pure-tables.css">
+    
+    <!-- CSS | Buttons -->
+    <link rel="stylesheet" type="text/css" href="css/components/pure-buttons.css">
+
+    <!-- CSS | Forms -->
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/pure/0.6.0/forms-nr-min.css">
+    
+    <!-- CSS | Font Awesome Icons -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    
+    <!-- CSS | Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet" type="text/css">
+    
+    <!-- CSS | Required -->
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/dashboard.css">
+
+    <script type="text/javascript">function debug(obj) { console.dir(obj) } var i = 0;</script>
 </head>
 
 <body>
-    <svg id="svgCanvas" version="1.1" baseProfile="full" xmlns="http://www.w3.org/2000/svg">
-        <g id="viewport">
-            <circle id="moveMe" cx="800" cy="282" r="80" fill="green"  />
-            <circle id="moveMe2" cx="300" cy="282" r="80" fill="red"  />
 
-        </g>
-    </svg>
+    <!-- Modal | Manage Unit -->
+    <div id="manageUnitModal" class="modal">
+        <header>
+            <h2>Update Unit</h2>
+            <button class="pure-button button-error" ui-role="closeModal">
+                <i class="fa fa-times"></i>
+            </button>
+        </header>
 
+        <section id="manageUnitSection" class="box pure-form pure-form-stacked">
+            <fieldset>
+                <label><strong>Order</strong></label>
+                <select unit-update="unitOrder" name="unitOrder">
+                    <option>Hold</option>
+                    <option>Move</option>
+                    <option>Support</option>
+                    <option>Convoy</option>
+                </select>
+
+                <br>                      
+
+                <label><strong>Province</strong></label>
+                <select unit-update="unitProvince" name="unitProvince">
+                    <option value="None" selected="">None</option>
+                    <option value="Adriatic Sea">Adriatic Sea</option>
+                    <option value="Aegean Sea">Aegean Sea</option>
+                    <option value="Albania">Albania</option>
+                    <option value="Ankara">Ankara</option>
+                    <option value="Apulia">Apulia</option>
+                    <option value="Armenia">Armenia</option>
+                    <option value="Baltic Sea">Baltic Sea</option>
+                    <option value="Barents Sea">Barents Sea</option>
+                    <option value="Belgium">Belgium</option>
+                    <option value="Berlin">Berlin</option>
+                    <option value="Black Sea">Black Sea</option>
+                    <option value="Bohemia">Bohemia</option>
+                    <option value="Brest">Brest</option>
+                    <option value="Budapest">Budapest</option>
+                    <option value="Bulgaria">Bulgaria</option>
+                    <option value="Burgundy">Burgundy</option>
+                    <option value="Clyde">Clyde</option>
+                    <option value="Constantinople">Constantinople</option>
+                    <option value="Denmark">Denmark</option>
+                    <option value="Eastern Mediterranean">Eastern Mediterranean</option>
+                    <option value="Edinburgh">Edinburgh</option>
+                    <option value="English Channel">English Channel</option>
+                    <option value="Finland">Finland</option>
+                    <option value="Galicia">Galicia</option>
+                    <option value="Gascony">Gascony</option>
+                    <option value="Greece">Greece</option>
+                    <option value="Gulf of Bothnia">Gulf of Bothnia</option>
+                    <option value="Gulf of Lyon">Gulf of Lyon</option>
+                    <option value="Helgoland Bight">Helgoland Bight</option>
+                    <option value="Holland">Holland</option>
+                    <option value="Ionian Sea">Ionian Sea</option>
+                    <option value="Irish Sea">Irish Sea</option>
+                    <option value="Kiel">Kiel</option>
+                    <option value="Liverpool">Liverpool</option>
+                    <option value="Livonia">Livonia</option>
+                    <option value="London">London</option>
+                    <option value="Marseilles">Marseilles</option>
+                    <option value="Mid-Atlantic Ocean">Mid-Atlantic Ocean</option>
+                    <option value="Moscow">Moscow</option>
+                    <option value="Munich">Munich</option>
+                    <option value="Naples">Naples</option>
+                    <option value="North Africa">North Africa</option>
+                    <option value="North Atlantic Ocean">North Atlantic Ocean</option>
+                    <option value="North Sea">North Sea</option>
+                    <option value="Norway">Norway</option>
+                    <option value="Norwegian Sea">Norwegian Sea</option>
+                    <option value="Paris">Paris</option>
+                    <option value="Picardy">Picardy</option>
+                    <option value="Piedmont">Piedmont</option>
+                    <option value="Portugal">Portugal</option>
+                    <option value="Prussia">Prussia</option>
+                    <option value="Rome">Rome</option>
+                    <option value="Ruhr">Ruhr</option>
+                    <option value="Rumania">Rumania</option>
+                    <option value="Serbia">Serbia</option>
+                    <option value="Sevastopol">Sevastopol</option>
+                    <option value="Silesia">Silesia</option>
+                    <option value="Skagerrak">Skagerrak</option>
+                    <option value="Smyrna">Smyrna</option>
+                    <option value="Spain">Spain</option>
+                    <option value="St Petersburg">St Petersburg</option>
+                    <option value="Sweden">Sweden</option>
+                    <option value="Switzerland">Switzerland</option>
+                    <option value="Syria">Syria</option>
+                    <option value="Trieste">Trieste</option>
+                    <option value="Tunis">Tunis</option>
+                    <option value="Tuscany">Tuscany</option>
+                    <option value="Tyrolia">Tyrolia</option>
+                    <option value="Tyrrhenian Sea">Tyrrhenian Sea</option>
+                    <option value="Ukraine">Ukraine</option>
+                    <option value="Venice">Venice</option>
+                    <option value="Vienna">Vienna</option>
+                    <option value="Wales">Wales</option>
+                    <option value="Warsaw">Warsaw</option>
+                    <option value="Western Mediterranean">Western Mediterranean</option>
+                    <option value="Yorkshire">Yorkshire</option>
+                </select>
+
+                <br>                      
+
+                <label><strong>Target</strong></label>
+                <select unit-update="unitTargetProvince" name="unitTargetProvince">
+                    <option value="None" selected="">None</option>
+                    <option value="Adriatic Sea">Adriatic Sea</option>
+                    <option value="Aegean Sea">Aegean Sea</option>
+                    <option value="Albania">Albania</option>
+                    <option value="Ankara">Ankara</option>
+                    <option value="Apulia">Apulia</option>
+                    <option value="Armenia">Armenia</option>
+                    <option value="Baltic Sea">Baltic Sea</option>
+                    <option value="Barents Sea">Barents Sea</option>
+                    <option value="Belgium">Belgium</option>
+                    <option value="Berlin">Berlin</option>
+                    <option value="Black Sea">Black Sea</option>
+                    <option value="Bohemia">Bohemia</option>
+                    <option value="Brest">Brest</option>
+                    <option value="Budapest">Budapest</option>
+                    <option value="Bulgaria">Bulgaria</option>
+                    <option value="Burgundy">Burgundy</option>
+                    <option value="Clyde">Clyde</option>
+                    <option value="Constantinople">Constantinople</option>
+                    <option value="Denmark">Denmark</option>
+                    <option value="Eastern Mediterranean">Eastern Mediterranean</option>
+                    <option value="Edinburgh">Edinburgh</option>
+                    <option value="English Channel">English Channel</option>
+                    <option value="Finland">Finland</option>
+                    <option value="Galicia">Galicia</option>
+                    <option value="Gascony">Gascony</option>
+                    <option value="Greece">Greece</option>
+                    <option value="Gulf of Bothnia">Gulf of Bothnia</option>
+                    <option value="Gulf of Lyon">Gulf of Lyon</option>
+                    <option value="Helgoland Bight">Helgoland Bight</option>
+                    <option value="Holland">Holland</option>
+                    <option value="Ionian Sea">Ionian Sea</option>
+                    <option value="Irish Sea">Irish Sea</option>
+                    <option value="Kiel">Kiel</option>
+                    <option value="Liverpool">Liverpool</option>
+                    <option value="Livonia">Livonia</option>
+                    <option value="London">London</option>
+                    <option value="Marseilles">Marseilles</option>
+                    <option value="Mid-Atlantic Ocean">Mid-Atlantic Ocean</option>
+                    <option value="Moscow">Moscow</option>
+                    <option value="Munich">Munich</option>
+                    <option value="Naples">Naples</option>
+                    <option value="North Africa">North Africa</option>
+                    <option value="North Atlantic Ocean">North Atlantic Ocean</option>
+                    <option value="North Sea">North Sea</option>
+                    <option value="Norway">Norway</option>
+                    <option value="Norwegian Sea">Norwegian Sea</option>
+                    <option value="Paris">Paris</option>
+                    <option value="Picardy">Picardy</option>
+                    <option value="Piedmont">Piedmont</option>
+                    <option value="Portugal">Portugal</option>
+                    <option value="Prussia">Prussia</option>
+                    <option value="Rome">Rome</option>
+                    <option value="Ruhr">Ruhr</option>
+                    <option value="Rumania">Rumania</option>
+                    <option value="Serbia">Serbia</option>
+                    <option value="Sevastopol">Sevastopol</option>
+                    <option value="Silesia">Silesia</option>
+                    <option value="Skagerrak">Skagerrak</option>
+                    <option value="Smyrna">Smyrna</option>
+                    <option value="Spain">Spain</option>
+                    <option value="St Petersburg">St Petersburg</option>
+                    <option value="Sweden">Sweden</option>
+                    <option value="Switzerland">Switzerland</option>
+                    <option value="Syria">Syria</option>
+                    <option value="Trieste">Trieste</option>
+                    <option value="Tunis">Tunis</option>
+                    <option value="Tuscany">Tuscany</option>
+                    <option value="Tyrolia">Tyrolia</option>
+                    <option value="Tyrrhenian Sea">Tyrrhenian Sea</option>
+                    <option value="Ukraine">Ukraine</option>
+                    <option value="Venice">Venice</option>
+                    <option value="Vienna">Vienna</option>
+                    <option value="Wales">Wales</option>
+                    <option value="Warsaw">Warsaw</option>
+                    <option value="Western Mediterranean">Western Mediterranean</option>
+                    <option value="Yorkshire">Yorkshire</option>
+                </select>
+
+                <br>                      
+
+                <button ui-role="updateUnit" class="pure-button button-success">
+                    Update <i class="fa fa-upload"></i>
+                </button>
+
+                <button ui-role="deleteUnit" class="pure-button button-error">
+                    Delete <i class="fa fa-close"></i>
+                </button>                
+
+            </fieldset>
+        </section>
+    </div>
+    <!-- Modal | Manage Unit -->
+
+
+
+    
+
+    <!-- container -->
+    <div class="container">
+        <!-- svg -->
+        <svg id="svgCanvas" version="1.1">
+            <!-- viewport -->
+            <g id="viewport">
+                <circle id="moveMe" cx="400" cy="282" r="80" fill="green"  />
+            </g>
+            <!-- viewport -->
+        </svg>
+        <!-- svg -->
+
+        <!-- control panel -->
+        <div id="control-panel">
+
+            <!-- Section | Hamburger -->
+            <section class="frame">
+                <div class="hamburger-bar">
+                    <button class="pure-button pure-button-primary" ui-role="toggleControlPanel"><i class="fa fa-bars"></i></button>
+                </div>
+            </section>
+            <!-- Section | Hamburger -->
+
+            <!-- Section | Phase -->
+            <section class="frame">
+                <div class="header">
+                    <span>Phase</span>
+                </div>
+                <div class="content">
+                    <span>Resupply</span>
+                </div>
+            </section>
+            <!-- Section | Phase -->        
+
+            <!-- <i class="fa fa-hand-paper-o"></i> -->
+            <!-- <i class="fa fa-location-arrow"></i> -->
+            <!-- <i class="fa fa-shield"></i> -->
+            <!-- <i class="fa fa-ship"></i> -->
+
+            <!-- Section | Orders -->
+            <section class="frame">
+                <div class="header">
+                    <span>Units and Orders</span>
+                </div>
+                <div class="content">
+                    <table id="orderTable" class="pure-table pure-table-horizontal no-border">
+                        <thead>
+                            <tr>
+                                <th>Type</th>
+                                <th>Order</th>
+                                <th>Province</th>
+                                <th>Target Province</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td gameDataIndex="0">Army</td>
+                                <td gameDataIndex="1">Move</td>
+                                <td gameDataIndex="36">London</td>
+                                <td gameDataIndex="43">North Atlantic Ocean</td>
+                                <td>
+                                    <button class="pure-button" ui-role="manageUnit">
+                                        <i class="fa fa-wrench"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td gameDataIndex="1">Fleet</td>
+                                <td gameDataIndex="2">Support</td>
+                                <td gameDataIndex="47">Paris</td>
+                                <td gameDataIndex="16">Burgundy</td>
+                                <td>
+                                    <button class="pure-button" ui-role="manageUnit">
+                                        <i class="fa fa-wrench"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>                    
+                </div>
+            </section>
+            <!-- Section | Orders -->
+
+            <!-- Section | Units -->
+            <section class="frame">
+                <div class="header">
+                    <span>Create Unit</span>
+                </div>
+                <div class="content">
+                    <button class="pure-button" data-button="createUnit">Army <i class="fa fa-odnoklassniki"></i></button>
+                    <button class="pure-button" data-button="createNavy">Navy <i class="fa fa-ship"></i></button>
+                </div>
+            </section>
+            <!-- Section | Units -->
+
+            <!-- Section | Supply Depots -->
+            <section class="frame">
+                <div class="header">
+                    <span>Supply Depots</span>
+                </div>
+                <div class="content">
+                    <table id="supplyDepotsTable" class="pure-table pure-table-horizontal no-border">
+                        <thead>
+                            <tr>
+                                <th>Province</th>
+                                <th>Geography</th>
+                                <th>Creates</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>London</td>
+                                <td>Coastal</td>
+                                <td>Both</td>
+                            </tr>
+                            <tr>
+                                <td>Paris</td>
+                                <td>Inland</td>
+                                <td>Army</td>
+                            </tr>
+                            <tr>
+                                <td>North Atlantic Ocean</td>
+                                <td>Water</td>
+                                <td>Fleet</td>
+                            </tr>                            
+                        </tbody>
+                    </table>  
+                </div>
+            </section>
+            <!-- Section | Supply Depots -->
+
+        </div>
+        <!-- control panel -->
+    </div>
+    <!-- container -->
+
+    <!-- Javascript | Game Data -->
+    <script src="js/game-data/gameData.js"></script>
+
+
+    <script src="js/functions/functions.js"></script>
     <script src="js/dragSVGElements.js"></script>
+
+    <!-- Javascript | UI Components -->
+    <script src="js/ui/closeModal.js"></script>
+
+
+
+    <script src="js/control-panel/manageUnit.js"></script>
+    <script src="js/control-panel/createUnit.js"></script>
+    <script src="js/control-panel/controlPanelToggle.js"></script>
+
+
 
 
     <script type="text/javascript">
-
-        function debug(obj) { 
-            console.dir(obj) 
-        }
-
+        
+        // function debug(obj) { console.dir(obj) }
+        
         var svg = document.getElementsByTagName('svg')[0]
         var viewport = document.getElementById('viewport')
-
+        
         var circle = document.getElementById('moveMe')
-
-        circle.addEventListener('mousedown', dragSVGElements, false)
-        document.getElementById('moveMe2').addEventListener('mousedown', dragSVGElements, false)
-
-        // loop through all elements and dynamically add mousedown handlers to each in an IIFE
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        circle.addEventListener('mousedown', dragSVGElements)
+        
+        
+        // document.getElementById('addSupplyDepot').addEventListener('click', function(event) {
+        //     var newElement = document.createElementNS("http://www.w3.org/2000/svg", 'circle');
+        //     newElement.setAttribute('cx', '300');
+        //     newElement.setAttribute('cy', '300');
+        //     newElement.setAttribute('r', '20');
+        //     newElement.setAttribute('class', 'supply-depot');
+        //     svg.appendChild(newElement);
+        // });
+            
 
         
+        // document.getElementById('newUnit').addEventListener('click', createUnit)
 
-
-
-
-
-
-
-
-
-
-
+        
     </script>
 
     <!-- Javascript -->
-
     <script src="js/zoomPan.js"></script>
     <script type="text/javascript">
         panZoomSVG(svg)

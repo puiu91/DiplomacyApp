@@ -20,8 +20,8 @@ class OrderGenerator
 
         if ($order['unit'] === 'Army')
             $this->unit = 'A';
-        if ($order['unit'] === 'Navy')
-            $this->unit = 'N';
+        if ($order['unit'] === 'Fleet')
+            $this->unit = 'F';
 
         $this->order = $order['order'];
         $this->currentProvince = $order['currentProvince'];
@@ -204,7 +204,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                     <label for="email">Unit</label>
                                     <select id="unit" name="unit">
                                         <option>Army</option>
-                                        <option>Navy</option>
+                                        <option>Fleet</option>
                                     </select>
 
                                     <label for="email">Order Type</label>

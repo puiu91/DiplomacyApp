@@ -5,6 +5,8 @@
  */ 
 function dragSVGElements(event) {
 
+    var evt = event
+
     /**
      * SVG container
      * @type {object} prototype of SVGSVGElement
@@ -12,13 +14,32 @@ function dragSVGElements(event) {
     var svg = document.getElementsByTagName('svg')[0]
 
     /**
-     * Element in the svg container that had a mousedown event occur (and presumabl being dragged)
+     * Element in the svg container that had a mousedown event occur (and presumably being dragged)
+     * Travel up the DOM path until a <g> group of items is found
      * @type {object}
      */
-    var element = event.target
+    /* cant get recurisve to work 
+    var getGroup = function (evt) {
+        if (event.target.nodeName !== 'g') {
+            return getGroup(evt.target)
+        }
+
+        debug('outside function')
+
+        element = event.target
+    }
+    */
+   
+    if (event.target.nodeName === 'path')
+        element = event.target.parentNode
+    else if (event.target.nodeName = 'g')
+        element = event.target
+    else
+        return;
 
     // initialize handler
     mouseDown(event)
+    debug(element)
 
     /**
      * Determines if an object contains the SVGTransform object in its SVGTransformList object, otherwise it creates

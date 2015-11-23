@@ -4,8 +4,12 @@ function panZoomSVG(svg) {
      * Gets the viewport in the svg container
      * @type {object}
      */
-    var viewport = svg.children[0]
-
+    if (svg) {
+        var viewport = svg.children[0]
+    } else {
+        return
+    }
+    
     /**
      * Stores the state of panning
      * @type {Boolean}
@@ -22,7 +26,7 @@ function panZoomSVG(svg) {
      * Coefficient that dictates the velocity of panning - a higher number slows panning
      * @type {int}
      */
-    var panningSmoother = 40
+    var panningSmoother = 10
 
     /**
      * add event listeners with useCapture true so that  all events of the 

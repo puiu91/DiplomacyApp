@@ -1,13 +1,27 @@
-// (function(window, document, undefined) {
+var manageUnit = (function() {
 
     'use strict'
+
+    // references to DOM elements
+    var modals = {
+      manageUnit: document.getElementById('manageUnitModal')
+    }
+
+    var unitButtons = {
+      manage: document.querySelectorAll('[ui-role = manageUnit]'),
+      update: document.querySelectorAll('[ui-role = updateUnit]')[0],
+      delete: document.querySelectorAll('[ui-role = deleteUnit]')[0]      
+    }
+
+    var tables = {
+      unitOrders: document.getElementById('orderTable')
+    }
 
     /**
      * Store UI components
      */
     var manageUnitButtons = document.querySelectorAll('[ui-role = manageUnit]')
     var manageUnitModal   = document.getElementById('manageUnitModal')
-    var manageUnitSection = manageUnitModal.children[0]
     var updateUnitButton  = document.querySelectorAll('[ui-role = updateUnit]')[0]
     var deleteUnitButton  = document.querySelectorAll('[ui-role = deleteUnit]')[0]
 
@@ -18,8 +32,6 @@
     var updateCurrentProvince = document.querySelectorAll('[unit-update = unitProvince]')[0]
     var updateTargetProvince  = document.querySelectorAll('[unit-update = unitTargetProvince]')[0]
 
-    var unitOrdersTable = document.getElementById('orderTable')
-
     /**
      * Store parent row of unit being managed
      */
@@ -28,48 +40,37 @@
 
     /**
      * Handles extraction of unit information to populate the manage unit modal
-     * @param  {[type]} event [description]
-     * @return {[type]}       [description]
      */
     function manageUnit(e, rowIndex) {
 
-        /**
-         * Extract cells in the row that the clicked button belongs to
-         * @type {HTMLCollection}
-         */
-        row = unitOrdersTable.rows[rowIndex].cells
+        // extract cells in the row that the clicked button belongs to
+        row = tables.unitOrders.rows[rowIndex].cells
 
-        /**
-         * store unit information
-         * @type {Object}
-         */
-        var unitInfo = {
-
-            'gameDataIndex' : {
-               'type'           : row[0].attributes['gameDataIndex'].textContent,
-               'order'          : row[1].attributes['gameDataIndex'].textContent,
-               'province'       : row[2].attributes['gameDataIndex'].textContent,
-               'targetProvince' : row[3].attributes['gameDataIndex'].textContent
+        var unitInfo = 
+        {
+            gameDataIndex: 
+            {
+               type           : row[0].attributes['gameDataIndex'].textContent,
+               order          : row[1].attributes['gameDataIndex'].textContent,
+               province       : row[2].attributes['gameDataIndex'].textContent,
+               targetProvince : row[3].attributes['gameDataIndex'].textContent
             },     
-
-            'values' : {
-                'type'           : row[0].textContent,
-                'order'          : row[1].textContent,
-                'province'       : row[2].textContent,
-                'targetProvince' : row[3].textContent
+            values: 
+            {
+                type           : row[0].textContent,
+                order          : row[1].textContent,
+                province       : row[2].textContent,
+                targetProvince : row[3].textContent
             }
-
         }
 
         // todo | block out rest of window to prevent clicking  
         // todo | checking if unit type allows a change in province
 
         // display modal
-        manageUnitModal.classList.add('visible')
+        modals.manageUnit.classList.add('visible')
 
-        debug(manageUnitModal)
-
-        // set selected in select fields as unit info attributes
+        // set select fields with unit info attributes as selected elements
         updateUnitOrder.options.selectedIndex       = unitInfo.gameDataIndex.order
         updateCurrentProvince.options.selectedIndex = unitInfo.gameDataIndex.province
         updateTargetProvince.options.selectedIndex  = unitInfo.gameDataIndex.targetProvince
@@ -77,25 +78,22 @@
 
     /**
      * Update unit and its respective row in the Unit and Orders table
-     * @return {[type]} [description]
      */
     function updateUnit () {
-
-        debug(rowIndex)
 
         // get unit updates
         var unitUpdates = {
 
-            'gameDataIndex' : {
-                'order'          : updateUnitOrder.options.selectedIndex,
-                'province'       : updateCurrentProvince.options.selectedIndex,
-                'targetProvince' : updateTargetProvince.options.selectedIndex
+            gameDataIndex: {
+                order: updateUnitOrder.options.selectedIndex,
+                province: updateCurrentProvince.options.selectedIndex,
+                targetProvince: updateTargetProvince.options.selectedIndex
             },     
 
-            'values' : {
-                'order'          : updateUnitOrder.options[updateUnitOrder.selectedIndex].value,
-                'province'       : updateCurrentProvince.options[updateCurrentProvince.selectedIndex].value,
-                'targetProvince' : updateTargetProvince.options[updateTargetProvince.selectedIndex].value
+            values: {
+                order: updateUnitOrder.options[updateUnitOrder.selectedIndex].value,
+                province: updateCurrentProvince.options[updateCurrentProvince.selectedIndex].value,
+                targetProvince: updateTargetProvince.options[updateTargetProvince.selectedIndex].value
             }
 
         }
@@ -111,17 +109,16 @@
         row[3].attributes['gameDataIndex'].textContent = unitUpdates.gameDataIndex.targetProvince
 
         // hide modal
-        manageUnitModal.classList.remove('visible')
+        modals.manageUnit.classList.remove('visible')
     }    
 
     /**
     * Deletes unit specified by user (represented as a table row)
-    * @return {[type]} [description]
     */
-    function deleteUnit(unitRow) {
+    function deleteUnit() {
 
         // remove selected row from unit table
-        document.getElementById('orderTable').deleteRow(unitRow)
+        document.getElementById('orderTable').deleteRow(rowIndex)
 
         /**
          * Inform the server that the specified unit has been deleted
@@ -133,44 +130,52 @@
         manageUnitModal.classList.remove('visible')   
     }
 
-    // add event listeners to each manageUnitButton
-    // for (i = manageUnitButtons.length; i--;) {
-        // (function(i) {
-            // manageUnitButtons[i].addEventListener('click', manageUnit, false) 
-        // })(i);
-    // }
+    /**
+     * Searches a up the node tree of an element until it finds the requested tag
+     * @param  {obj} el     Element to start search from
+     * @param  {string} tag The tag to search for
+     * @return {obj}        HTMLElement once found
+     */
+    function searchParentNodeForElement(el, tag) {
+      while (el.parentNode) {
+        el = el.parentNode
+
+        if (el.tagName === tag) {
+          return el;
+        }
+      }
+      return null;
+    }
 
     /**
-     * Assign a click event handler on the parent element (units table) and using
-     * event delegation, detect when a button is clicked. Compare the click event target 
-     * to the element that should react.
+     * Assign a click event handler on the parent element (units table). Use event delegation
+     * to detect when a button is clicked. Compare the click event target to the element that 
+     * should react.
      * 
-     * This allows for dynamically adding new table rows (with buttons) without having 
-     * to loop through all the target elements again to assign click handlers.
+     * This avoids looping through all buttons that exist in the table rows in order to assign
+     * them event listener click handlers. 
      */
-    (function() {
-        unitOrdersTable.addEventListener('click', function() {
-            var nodeName = event.target.nodeName
+    tables.unitOrders.addEventListener('click', function() {
 
-            // determine element clicked and extract row index
-            if (nodeName.toLowerCase() === 'button') {
-                rowIndex = event.target.parentNode.parentNode.rowIndex
-                manageUnit(event, rowIndex)
-            } else if (nodeName.toLowerCase() === 'i') {
-                rowIndex = event.target.parentNode.parentNode.parentNode.rowIndex
-                manageUnit(event, rowIndex)
-            }
-        }, false)
-    })();
+      var nodeName = event.target.nodeName
+      
+      // determine element clicked and extract row index
+      if (nodeName === 'BUTTON' || nodeName === 'I') {
+        rowIndex = searchParentNodeForElement(event.target, 'TR').rowIndex
+        
+        // send information to manage unit handler
+        manageUnit(event, rowIndex)        
+      };
+    }, false)
 
     // add event listener to update unit button
-    updateUnitButton.addEventListener('click', function() {
+    unitButtons.update.addEventListener('click', function() {
         updateUnit()
     }, false)
 
     // add event listener to the delete unit button
-    deleteUnitButton.addEventListener('click', function() {
-        deleteUnit(rowIndex)
+    unitButtons.delete.addEventListener('click', function() {
+        deleteUnit()
     }, false)
 
-// })(window, document);
+})();

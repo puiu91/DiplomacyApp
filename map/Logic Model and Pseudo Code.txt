@@ -1,0 +1,96 @@
+Logic Model and Pseudo Code
+
+Server receives an order from client then emits new orders to all connected clients, 
+who in turn update their DOM with new orders
+
+socket.on(‘receive order’) --> sockets.emit('orders') --> client socket.on('update orders')
+
+Solution
+→ each unit piece has a unique id ('country_id')
+→ need to save game state
+  → NodeJS which recieves the orders will keep track of this
+  → need to communicate coordinates of SVG object to all connected clients as one client moves their unit
+  → update the orders
+  → update the SVG canvas
+
+→ how to resolve orders?
+→ players manually resolve
+→ everyone gets a list of the updated orders when all players are finished
+    → i.e., - every player needs to broadcast 'finished turn'
+    → on finish turn from all the players, update the screens of everyone with the 
+    new order list
+    → manually resolve the orders
+
+→ reset state of game to ...
+→ different phases:
+→ phase 1: players write orders, click 'finish turn' when all are done
+→ phase 2: state resets to 'order resolving'
+→ phase 3: when all are done order resolving, they click 'finsihed order resolving'
+→ phase 4: return back to order writing, increment season and year as necessary
+→ what do to do about the supply depots?
+    → need to also communicate supply depot ownership
+    → a master player needs to control which supply depots belong to who
+
+FEATURE LIST
+--------------------
+
+------------------------
+MAP
+------------------------
+→ map will highlight the start territories (supply depots)
+→ map will highlight adjacent territories (without supply depots) with player's colour
+  if the territory is bordering a supply-territory and is uncontested (i.e., another player does not
+  border or neighbour this territory)
+  → otherwise if two players contest a territory (but have no actual units on it) then the map tile 
+     will blend have a pattern of two colours applied to it (i.e,. red colour / / / / / (dashes) blue colour)
+
+------------------------
+HISTORY
+------------------------
+→ keep a log of all orders that were created
+→ keep a log of defensive vs. offensive alliances between players
+→ keep a log of ceasefires, active wars, non aggression pacts
+
+------------------------
+SESSION AND SAVINIG
+------------------------
+
+→ backend which stores current games
+→ php form for create new game that sets how many players to put
+→ user clicks on existing game, they are taken to a different page (or javascript modal)
+   where they have to select their country 
+   - onselect, need to check to see that a country isn't already taken (database???)
+   - once selected, they are given a SESSION ID of the game and country they picked and
+   sent to the game as the country they chose (redirect to game)
+→ on new game
+→ NodeJS javascript component needs to save game state each time after mousemove ends on user, 
+but treat that item that was moved as an object and only update that object in the database with
+new SVGDOM coordinates (getCTM()) and save CTM in database
+
+→ restore / Load game which will:
+::: read from database a list of all unit objects, capitals, province ownership
+::: then broadcast the information to the user requesting the load game
+::: when new users join, the databaseRetriever will again load game details from database
+    and emit to the recently connected player requesting a socket.on('connection')
+   
+
+
+
+
+
+
+
+
+
+
+
+
+https://scotch.io/tutorials/a-realtime-room-chat-app-using-node-webkit-socket-io-and-mean
+
+http://danielnill.com/nodejs-tutorial-with-socketio/
+
+http://www.programwitherik.com/socket-io-tutorial-with-node-js-and-express/
+
+http://code.tutsplus.com/tutorials/real-time-chat-with-nodejs-socketio-and-expressjs--net-31708
+
+http://www.nodebeginner.org/#javascript-and-nodejs

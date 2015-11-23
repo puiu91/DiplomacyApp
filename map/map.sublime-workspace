@@ -4,6 +4,26 @@
 		"selected_items":
 		[
 			[
+				"insert",
+				"insertCell"
+			],
+			[
+				"ModifyO",
+				"modifyOrderButtons"
+			],
+			[
+				"createU",
+				"createUnitButton"
+			],
+			[
+				"modify",
+				"modifyUnitOrderButtons"
+			],
+			[
+				"getE",
+				"getElementsByTagName"
+			],
+			[
 				"viewports",
 				"viewportSy"
 			],
@@ -379,30 +399,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "test2.php",
-			"settings":
-			{
-				"buffer_size": 4357,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "js/zoomPan.js",
-			"settings":
-			{
-				"buffer_size": 4237,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "            // this.transform.baseVal.getItem(0).setTranslate(p.x, p.y);\n",
-			"settings":
-			{
-				"buffer_size": 73,
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -470,18 +466,84 @@
 	"expanded_folders":
 	[
 		"/C/wamp/www/DiplomacyApp/map",
-		"/C/wamp/www/DiplomacyApp/map/js"
+		"/C/wamp/www/DiplomacyApp/map/css",
+		"/C/wamp/www/DiplomacyApp/map/css/components",
+		"/C/wamp/www/DiplomacyApp/map/js",
+		"/C/wamp/www/DiplomacyApp/map/js/control-panel",
+		"/C/wamp/www/DiplomacyApp/map/js/functions",
+		"/C/wamp/www/DiplomacyApp/map/js/game-data",
+		"/C/wamp/www/DiplomacyApp/map/js/SimpleTable",
+		"/C/wamp/www/DiplomacyApp/map/js/todos",
+		"/C/wamp/www/DiplomacyApp/map/js/ui",
+		"/C/wamp/www/DiplomacyApp/map/ModalWindowEffects/css",
+		"/C/wamp/www/DiplomacyApp/map/ModalWindowEffects/js"
 	],
 	"file_history":
 	[
-		"/C/wamp/www/DiplomacyApp/map/js/zoomPan.js",
-		"/C/wamp/www/DiplomacyApp/map/test.php",
-		"/C/wamp/www/DiplomacyApp/map/index.php",
-		"/C/Users/OPS/Desktop/SimpleDragging.html",
+		"/C/wamp/www/DiplomacyApp/map/simple.html",
+		"/C/wamp/www/DiplomacyApp/map/js/control-panel/manageUnit.js",
+		"/C/wamp/www/DiplomacyApp/map/js/control-panel/createUnit.js",
 		"/C/wamp/www/DiplomacyApp/map/css/dashboard.css",
+		"/C/wamp/www/DiplomacyApp/map/js/todos/todos.js",
+		"/C/wamp/www/DiplomacyApp/map/js/control-panel/updateUnit.js",
+		"/C/wamp/www/DiplomacyApp/map/js/control-panel/modifyUnit.js",
+		"/C/wamp/www/DiplomacyApp/map/js/game-data/gameData.js",
+		"/C/wamp/www/DiplomacyApp/map/css/components/pure-buttons.css",
+		"/C/wamp/www/DiplomacyApp/map/js/control-panel/controlPanelToggle.js",
+		"/C/wamp/www/DiplomacyApp/map/js/ui/closeModal.js",
+		"/E/newinterface/js/closeModal.js",
+		"/E/newinterface/js/editGeocode.js",
+		"/E/newinterface/index.php",
+		"/E/newinterface/css/custom.css",
+		"/C/wamp/www/DiplomacyApp/map/index.php",
+		"/E/newinterface/js/tablesort.js",
+		"/E/newinterface/js/moveModal.js",
+		"/C/wamp/www/DiplomacyApp/map/ModalWindowEffects/index.html",
+		"/C/wamp/www/DiplomacyApp/map/ModalWindowEffects/css/default.css",
+		"/C/wamp/www/DiplomacyApp/map/js/control-panel/modify-unit.js",
+		"/C/wamp/www/DiplomacyApp/map/js/control-panel/create-unit.js",
+		"/C/wamp/www/DiplomacyApp/map/css/components/pure-tables.css",
+		"/C/wamp/www/DiplomacyApp/map/js/functions/functions.js",
+		"/C/wamp/www/DiplomacyApp/map/js/control-panel-unit.js",
+		"/C/wamp/www/DiplomacyApp/map/js/control-panel.js",
+		"/C/wamp/www/DiplomacyApp/map/js/SimpleTable/SimpleTable.js",
+		"/C/wamp/www/DiplomacyApp/map/js/controlPanel.js",
+		"/E/simple.html",
+		"/C/wamp/www/DiplomacyApp/map/js/dragSVGElements.js",
+		"/C/wamp/www/DiplomacyApp/map/js/zoomPan.js",
+		"/C/wamp/www/DiplomacyApp/map custom svg/Untitled-3.svg",
+		"/C/wamp/www/DiplomacyApp/map custom svg/Handmade/handmade2.svg",
+		"/C/Users/OPS/Documents/222.klc",
+		"/C/Users/OPS/Documents/hosts",
+		"/C/Windows/System32/drivers/etc/hosts",
+		"/C/wamp/www/DiplomacyApp/beta 2/index.php",
+		"/C/wamp/www/DiplomacyApp/map/ModalWindowEffects/README.md",
+		"/J/!!! HOME/d/simple.html",
+		"/J/!!! HOME/d/css/dashboard.css",
+		"/J/!!! HOME/d/index.php",
+		"/J/!!! HOME/d/complex.php",
+		"/J/!!! HOME/d/js/zoomPan.js",
+		"/J/!!! HOME/d/js/d.js",
+		"/C/wamp/www/DiplomacyApp/map custom svg/UK.svg",
+		"/C/wamp/www/DiplomacyApp/map custom svg/GOOD VERSION.svg",
+		"/C/wamp/www/DiplomacyApp/map/test2.php",
+		"/C/wamp/www/DiplomacyApp/map/sample.js",
+		"/C/wamp/www/DiplomacyApp/map/samplezoom.js",
+		"/C/wamp/www/DiplomacyApp/map custom svg/EU_map_brown.svg",
+		"/C/wamp/www/DiplomacyApp/map custom svg/Blank_map_europe_coloured.svg",
+		"/C/wamp/www/DiplomacyApp/diplomacy_online-master/map/bitmap_std.svg",
+		"/C/wamp/www/DiplomacyApp/diplomacy_online-master/map/svgScript.js",
+		"/C/wamp/www/DiplomacyApp/diplomacy_online-master/map/cvi_map_lib.js",
+		"/C/wamp/www/DiplomacyApp/diplomacy_online-master/html/orderEntry.tpl.php",
+		"/C/wamp/www/DiplomacyApp/diplomacy_online-master/html/login.tpl.php",
+		"/C/wamp/www/DiplomacyApp/diplomacy_online-master/map/svgParse.py",
+		"/C/wamp/www/DiplomacyApp/diplomacy_online-master/index.php",
+		"/C/wamp/www/DiplomacyApp/map/js/svgDragElements.js",
+		"/E/d/js/zoomPan.js",
+		"/C/wamp/www/DiplomacyApp/map/test.php",
+		"/C/Users/OPS/Desktop/SimpleDragging.html",
 		"/C/wamp/www/DiplomacyApp/map2/svg-diplomacy-master/app/data/maps/classic.json",
 		"/C/wamp/www/DiplomacyApp/map/js/d.js",
-		"/C/wamp/www/DiplomacyApp/map/samplezoom.js",
 		"/C/wamp/www/DiplomacyApp/map2/svg-diplomacy-master/app/actions/mapActions.js",
 		"/C/wamp/www/DiplomacyApp/map2/svg-diplomacy-master/app/actions/userActions.js",
 		"/C/wamp/www/DiplomacyApp/map2/svg-diplomacy-master/app/components/game-orders.js",
@@ -490,7 +552,6 @@
 		"/C/wamp/www/DiplomacyApp/map2/svg-diplomacy-master/app/models/map.js",
 		"/C/wamp/www/DiplomacyApp/map2/svg-diplomacy-master/app/helpers/fetch.js",
 		"/C/wamp/www/DiplomacyApp/map2/dist/js/diplomacy.js",
-		"/C/wamp/www/DiplomacyApp/beta 2/index.php",
 		"/C/wamp/www/!!NOV/diplomacygood/index.php",
 		"/C/wamp/www/!!NOV/diplomacygoogle/custom/diplomacy.js",
 		"/C/wamp/www/!!NOV/diplomacygoogle/index.php",
@@ -546,62 +607,7 @@
 		"/C/Users/hrps09806/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
 		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/GoogleMapsGeocoderInterface/index.php",
 		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/GoogleMapsGeocoderInterface/dist/js/npm.js",
-		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/GeocoderService/address-cleanup.php",
-		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/GoogleMapsGeocoder/address-cleanup.php",
-		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/GoogleMapsGeocoderInterface/dist/css/custom/fixes.css",
-		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/GoogleMapsGeocoderInterface/dist/js/polyfills/closest.js",
-		"/C/Users/hrps09806/Downloads/waypoints.gpx",
-		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/InCar Dashcam/dist/js/views/index.js",
-		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/GoogleMapsGeocoderInterface/data/sample.json",
-		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/GoogleMapsGeocoderInterface/datawriter.php",
-		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/GoogleMapsGeocoder/index.php",
-		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/GoogleMapsGeocoder/functions/functions.php",
-		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/GoogleMapsGeocoderInterface/dist/json/people.json",
-		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/GoogleMapsGeocoderInterface/dist/js/views/index.js",
-		"/C/Users/hrps09806/AppData/Roaming/Sublime Text 3/Packages/Default/Default (Windows).sublime-keymap",
-		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/GoogleMapsGeocoderInterface/php/functions/functions.php",
-		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/GoogleMapsGeocoderInterface/test.php",
-		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/GoogleMapsGeocoderInterface/data/sample2.json",
-		"//hqvmapp02/Users/hrps09584/Documents/hrps/frontline/warrants.php",
-		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/GoogleMapsGeocoder/halton dataset/live/prepared.csv",
-		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/GoogleMapsGeocoder/halton dataset/live/backup/prepared.csv",
-		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/GoogleMapsGeocoder/halton dataset/live/failed-addresses.csv",
-		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/GoogleMapsGeocoder/classes/unitTests/case_8.php",
-		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/GoogleMapsGeocoder/classes/unitTests/case_6.php",
-		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/GoogleMapsGeocoder/classes/unitTests/case_7.php",
-		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/GoogleMapsGeocoder/classes/unitTests/case_2.php",
-		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/GoogleMapsGeocoder/classes/unitTests/default.php",
-		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/GoogleMapsGeocoder/classes/unitTests/cases.csv",
-		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/GoogleMapsGeocoder/classes/unitTests/case_1.php",
-		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/GoogleMapsGeocoder/halton dataset/live/New folder/prepared.csv",
-		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/GoogleMapsGeocoder/data/data_test.csv",
-		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/GoogleMapsGeocoder/halton dataset/live data sample.csv",
-		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/GoogleMapsGeocoder/json_output.json",
-		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/GoogleMapsGeocoder/download-csv.php",
-		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/InCar Dashcam/index.php",
-		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/InCar Dashcam/dist/js/jquery/pagination/jquery.simplePagination.js",
-		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/InCar Dashcam/Annotate2/detail-original.php",
-		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/InCar Dashcam/dist/js/views/objects.txt",
-		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/InCar Dashcam/dist/js/views/ajax.txt",
-		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/InCar Dashcam/video_details.php",
-		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/InCar Dashcam/dist/css/custom/fixes.css",
-		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/InCar Dashcam/dist/css/custom/page-elements.css",
-		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/InCar Dashcam/dist/css/custom/navbar.css",
-		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/InCar Dashcam/dist/js/functions.js",
-		"/C/Users/hrps09806/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
-		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/InCar Dashcam/dist/css/custom/jQuery-ui-custom.css",
-		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/InCar Dashcam/Annotate2/library/Annotate2/DataMapper/AbstractDataMapper.php",
-		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/InCar Dashcam/Annotate2/library/Annotate2/DataMapper/DataMapperInterface.php",
-		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/InCar Dashcam/Annotate2/library/Annotate2/DatabaseAdapter/DatabaseAdapterInterface.php",
-		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/InCar Dashcam/Annotate2/library/Annotate2/DataMapper/AddressDataMapper.php",
-		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/InCar Dashcam/Annotate2/library/Annotate2/DatabaseAdapter/UniversalDatabaseAdapter.php",
-		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/InCar Dashcam/Annotate2/_config.php",
-		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/InCar Dashcam/application/config/config.php",
-		"/C/Users/hrps09806/Documents/Programming/Learning-MVC-master/application/models/RecipesModel.php",
-		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/InCar Dashcam/Annotate2/library/database2.class.php",
-		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/InCar Dashcam/Annotate2/library/autoload.php",
-		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/InCar Dashcam/Annotate2/library/Annotate2/Helper/NicheHelper.php",
-		"/C/Users/hrps09806/Documents/Programming/Learning-MVC-master/application/core/View.php"
+		"//hqvmapp02/Users/hrps09584/Documents/hrps/!christian/GeocoderService/address-cleanup.php"
 	],
 	"find":
 	{
@@ -620,6 +626,57 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"manageUnit",
+			"modifyOrder",
+			"manageUnitModal",
+			"modifyUnit",
+			"manageUnitSection",
+			"manageUnitModal",
+			"ui-role",
+			"modifyOrderForm",
+			"targetProvince",
+			"rowData",
+			"manageUnitModal",
+			"modifyOrderModal",
+			"modifyUnitForm",
+			"modifyUnitButtons",
+			"modifyOrderModal",
+			"modifyUnit",
+			"modifyOrderButtons",
+			"modifyOrderForm",
+			"\">",
+			"</option>",
+			"<option value=\"",
+			"modifyOrderForm",
+			"modifyOrderModal",
+			"primary",
+			"border-radius",
+			"error",
+			"warning",
+			"error",
+			"        <header>\n            <h2>Geocode Override</h2>\n            <button class=\"btn btn-danger\" ui-buttontype=\"closeModal\"><i class=\"fa fa-times-circle\"></i></button>\n        </header>\n",
+			"province",
+			"overlay",
+			"ModalEffects",
+			"createUnitModal",
+			"army",
+			"newOrder",
+			"create order",
+			"'",
+			"newOrder",
+			"N",
+			"element",
+			"navy",
+			"F",
+			"viewportMatrix",
+			"el",
+			"element",
+			"this",
+			"mouseDown",
+			"this",
+			"debug",
+			"originDrag",
+			"currentTranslate",
 			"viewportTx",
 			"handleMouseWheelUp",
 			"svg",
@@ -696,58 +753,7 @@
 			"url",
 			"testing",
 			"\"cut\"",
-			"del",
-			"readfile",
-			"AP",
-			"print_array",
-			"geocodeResponse",
-			"url_encode",
-			"url",
-			"administrative_area_level_2",
-			"getGeocodeResponse",
-			"#303",
-			"\n#303",
-			"\n#303b",
-			"\n\n\n\n#303b",
-			"\n\n\n\n224 Martin St #303b",
-			"\n\n\n\n224 Martin St #303b ",
-			"224 MARTIN",
-			"224 martin",
-			"224 MARTIN ST UN 303B",
-			"setComponentFilters",
-			"$this->address",
-			"-",
-			"AP",
-			"UN",
-			"-",
-			"unit_num",
-			"-",
-			"retrieveAddressDetails",
-			"read_CSV",
-			"true",
-			"setAddress",
-			"createAddressString",
-			"geocodeUrl",
-			"geocode",
-			"addressExists",
-			"isPartialResponse",
-			"print_array",
-			"isPartialResponse",
-			"retrieveAddressDetails",
-			"header",
-			"Main Street North",
-			"94 Main St N #4, Acton, ON L7J 1W2, Canada",
-			"setComponentFilters",
-			"print_array",
-			"proper",
-			"actual_dataset",
-			"setComponentFilters",
-			"toggleBootstrapHidden",
-			"alertWriter",
-			"show(table",
-			"DataTable",
-			"displayHTML",
-			"empty"
+			"del"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -772,280 +778,14 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "test2.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4357,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3653,
-								3653
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content"
-							],
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1260.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "js/zoomPan.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4237,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2785,
-								2785
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content"
-							],
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 672.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 73,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								35,
-								35
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content"
-							],
-							"default_dir": "C:\\wamp\\www\\DiplomacyApp\\map",
-							"syntax": "Packages/HTML/HTML.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 38.0
+		"height": 22.0
 	},
 	"input":
 	{
@@ -1140,10 +880,10 @@
 	"settings":
 	{
 	},
-	"show_minimap": false,
+	"show_minimap": true,
 	"show_open_files": false,
 	"show_tabs": true,
-	"side_bar_visible": true,
+	"side_bar_visible": false,
 	"side_bar_width": 314.0,
 	"status_bar_visible": true,
 	"template_settings":
